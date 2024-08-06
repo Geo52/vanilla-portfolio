@@ -1,0 +1,113 @@
+body {
+  background: hsl(44, 48%, 95%);
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro img{
+  width: 100px;
+  height: 100px;
+}
+
+.intro .social-icons {
+  margin-top: 1rem;
+}
+
+
+blockquote {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+blockquote p {
+  background: hsl(44, 48%, 100%);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.contact {
+  margin: 2rem 0;
+}
+
+.about{
+  /* width: 90%; */
+}
+
+.about p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+
+}
+
+.card {
+  margin: 1rem 0;
+  width: 90%;
+  max-width: 24rem;
+}
+
+@media (min-width: 1000px) {
+  body{
+    max-width: 1200px;
+    display: grid;
+    grid-template-areas: 
+    "intro about"
+    "contact projects";
+    gap: 0 1rem;
+
+  }
+
+  blockquote{
+    display: none;
+  }
+
+ 
+  .intro {
+    grid-area: intro;
+    min-width: 500px;
+    max-width: 500px;
+    position: sticky;
+    top: 0px;
+  }
+
+  .intro img{
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .contact {
+    grid-area: contact;
+    max-height: 10px;
+    position: sticky;
+    top: 185px;
+
+  }
+
+ 
+  .about {
+    grid-area: about;
+    max-width: 500px;
+  }
+
+  .projects {
+    grid-area: projects;
+    max-width: 500px;
+
+
+  }
+
+
+}
